@@ -2371,6 +2371,7 @@ void writeEnumToString(std::ofstream & ofs, DependencyData const& dependencyData
       << "  {" << std::endl;
   if (enumData.members.empty())
   {
+    ofs << "    (void)value;" << std::endl;
     ofs << "    return \"\";" << std::endl;
   }
   else
