@@ -24,12 +24,6 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// 32-bit vulkan is not typesafe for handles, so don't allow copy constructors on this platform by default.
-// To enable this feature on 32-bit platforms please define VK_CPP_TYPESAFE_CONVERSION
-#if defined(__LP64__) || defined(_WIN64) || defined(__x86_64__) || defined(_M_X64) || defined(__ia64) || defined (_M_IA64) || defined(__aarch64__) || defined(__powerpc64__)
-#define VK_CPP_TYPESAFE_CONVERSION 1
-#endif
-
 
 #ifndef VK_CPP_H_
 #define VK_CPP_H_
@@ -44,6 +38,12 @@
 #endif /*VKCPP_ENHANCED_MODE*/
 
 static_assert( VK_MAKE_VERSION(1, 0, 3) == VK_API_VERSION, "Wrong VK_API_VERSION!" );
+
+// 32-bit vulkan is not typesafe for handles, so don't allow copy constructors on this platform by default.
+// To enable this feature on 32-bit platforms please define VK_CPP_TYPESAFE_CONVERSION
+#if defined(__LP64__) || defined(_WIN64) || defined(__x86_64__) || defined(_M_X64) || defined(__ia64) || defined (_M_IA64) || defined(__aarch64__) || defined(__powerpc64__)
+#define VK_CPP_TYPESAFE_CONVERSION 1
+#endif
 
 namespace vk
 {
@@ -18251,6 +18251,7 @@ namespace vk
 
   static const char * getString(FramebufferCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18263,6 +18264,7 @@ namespace vk
 
   static const char * getString(QueryPoolCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18275,6 +18277,7 @@ namespace vk
 
   static const char * getString(RenderPassCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18287,6 +18290,7 @@ namespace vk
 
   static const char * getString(SamplerCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18299,6 +18303,7 @@ namespace vk
 
   static const char * getString(PipelineLayoutCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18311,6 +18316,7 @@ namespace vk
 
   static const char * getString(PipelineCacheCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18323,6 +18329,7 @@ namespace vk
 
   static const char * getString(PipelineDepthStencilStateCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18335,6 +18342,7 @@ namespace vk
 
   static const char * getString(PipelineDynamicStateCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18347,6 +18355,7 @@ namespace vk
 
   static const char * getString(PipelineColorBlendStateCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18359,6 +18368,7 @@ namespace vk
 
   static const char * getString(PipelineMultisampleStateCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18371,6 +18381,7 @@ namespace vk
 
   static const char * getString(PipelineRasterizationStateCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18383,6 +18394,7 @@ namespace vk
 
   static const char * getString(PipelineViewportStateCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18395,6 +18407,7 @@ namespace vk
 
   static const char * getString(PipelineTessellationStateCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18407,6 +18420,7 @@ namespace vk
 
   static const char * getString(PipelineInputAssemblyStateCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18419,6 +18433,7 @@ namespace vk
 
   static const char * getString(PipelineVertexInputStateCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18431,6 +18446,7 @@ namespace vk
 
   static const char * getString(PipelineShaderStageCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18443,6 +18459,7 @@ namespace vk
 
   static const char * getString(DescriptorSetLayoutCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18455,6 +18472,7 @@ namespace vk
 
   static const char * getString(BufferViewCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18467,6 +18485,7 @@ namespace vk
 
   static const char * getString(InstanceCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18479,6 +18498,7 @@ namespace vk
 
   static const char * getString(DeviceCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18491,6 +18511,7 @@ namespace vk
 
   static const char * getString(DeviceQueueCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18503,6 +18524,7 @@ namespace vk
 
   static const char * getString(ImageViewCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18515,6 +18537,7 @@ namespace vk
 
   static const char * getString(SemaphoreCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18527,6 +18550,7 @@ namespace vk
 
   static const char * getString(ShaderModuleCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18539,6 +18563,7 @@ namespace vk
 
   static const char * getString(EventCreateFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18551,6 +18576,7 @@ namespace vk
 
   static const char * getString(MemoryMapFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18563,6 +18589,7 @@ namespace vk
 
   static const char * getString(SubpassDescriptionFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18575,6 +18602,7 @@ namespace vk
 
   static const char * getString(DescriptorPoolResetFlagBits value)
   {
+    (void)value;
     return "";
   }
 
@@ -18587,6 +18615,7 @@ namespace vk
 
   static const char * getString(SwapchainCreateFlagBitsKHR value)
   {
+    (void)value;
     return "";
   }
 
@@ -18599,6 +18628,7 @@ namespace vk
 
   static const char * getString(DisplayModeCreateFlagBitsKHR value)
   {
+    (void)value;
     return "";
   }
 
@@ -18611,6 +18641,7 @@ namespace vk
 
   static const char * getString(DisplaySurfaceCreateFlagBitsKHR value)
   {
+    (void)value;
     return "";
   }
 
@@ -18624,6 +18655,7 @@ namespace vk
 #ifdef VK_USE_PLATFORM_ANDROID_KHR
   static const char * getString(AndroidSurfaceCreateFlagBitsKHR value)
   {
+    (void)value;
     return "";
   }
 #endif /*VK_USE_PLATFORM_ANDROID_KHR*/
@@ -18640,6 +18672,7 @@ namespace vk
 #ifdef VK_USE_PLATFORM_MIR_KHR
   static const char * getString(MirSurfaceCreateFlagBitsKHR value)
   {
+    (void)value;
     return "";
   }
 #endif /*VK_USE_PLATFORM_MIR_KHR*/
@@ -18656,6 +18689,7 @@ namespace vk
 #ifdef VK_USE_PLATFORM_WAYLAND_KHR
   static const char * getString(WaylandSurfaceCreateFlagBitsKHR value)
   {
+    (void)value;
     return "";
   }
 #endif /*VK_USE_PLATFORM_WAYLAND_KHR*/
@@ -18672,6 +18706,7 @@ namespace vk
 #ifdef VK_USE_PLATFORM_WIN32_KHR
   static const char * getString(Win32SurfaceCreateFlagBitsKHR value)
   {
+    (void)value;
     return "";
   }
 #endif /*VK_USE_PLATFORM_WIN32_KHR*/
@@ -18688,6 +18723,7 @@ namespace vk
 #ifdef VK_USE_PLATFORM_XLIB_KHR
   static const char * getString(XlibSurfaceCreateFlagBitsKHR value)
   {
+    (void)value;
     return "";
   }
 #endif /*VK_USE_PLATFORM_XLIB_KHR*/
@@ -18704,6 +18740,7 @@ namespace vk
 #ifdef VK_USE_PLATFORM_XCB_KHR
   static const char * getString(XcbSurfaceCreateFlagBitsKHR value)
   {
+    (void)value;
     return "";
   }
 #endif /*VK_USE_PLATFORM_XCB_KHR*/
